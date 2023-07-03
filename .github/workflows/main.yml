@@ -45,7 +45,7 @@ jobs:
           git config --local user.email "gooduckz04@gmail.com"
           git config --local user.name "GooduckZ"
           mv $HOME/线性代数荣誉课辅学讲义.pdf $(pwd)/讲义/ # bring it back 
-          git add -f main.pdf
+          git add -f ./讲义/线性代数荣誉课辅学讲义.pdf
           git commit -m "Updated by GitHub Action Automatically" 
           
       - name: Push PDF
