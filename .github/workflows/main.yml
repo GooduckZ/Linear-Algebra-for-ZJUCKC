@@ -52,14 +52,14 @@ jobs:
         uses: ad-m/github-push-action@v0.5.0
         with: 
           branch: gh_actions_builds 
-          force: false
+          force: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: main.pdf
+          files: ./讲义/线性代数荣誉课辅学讲义.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
