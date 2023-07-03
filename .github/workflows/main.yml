@@ -49,10 +49,10 @@ jobs:
           git commit -m "Updated by GitHub Action Automatically" 
           
       - name: Push PDF
-        uses: ad-m/github-push-action@v0.5.0
+        uses: ad-m/github-push-action@master
         with: 
           branch: gh_actions_builds 
-          force: true
+          force: false
           github_token: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Release
