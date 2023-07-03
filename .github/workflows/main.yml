@@ -20,8 +20,9 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: ./讲义/线性代数荣誉课辅学讲义.tex
-          work_in_root_file_dir: true
+          args: -xelatex -interaction=nonstopmode -file-line-error
+          root_file: 线性代数荣誉课辅学讲义.tex
+          working_directory: 讲义
       
       - name: Stash PDF
         run: |
