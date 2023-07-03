@@ -20,12 +20,12 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: /讲义/线性代数荣誉课辅学讲义.tex
+          root_file: ./讲义/线性代数荣誉课辅学讲义.tex
           work_in_root_file_dir: true
       
       - name: Stash PDF
         run: |
-          mv /讲义/线性代数荣誉课辅学讲义.pdf $HOME # cache the file
+          mv ./讲义/线性代数荣誉课辅学讲义.pdf $HOME # cache the file
           
       - name: Create Branch
         uses: peterjgrainger/action-create-branch@v2.0.1
